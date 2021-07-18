@@ -5,13 +5,11 @@ RSpec.describe 'Restaurant', type: :request do
 
   describe 'GET /restaurants' do
     it 'returns 200' do
-      get '/api/v1/restaurants'
+      get "/api/v1/restaurants"
       expect(response).to have_http_status(:success)
     end
     it 'returns restaurants' do
-      get '/api/v1/restaurants'
-      pp response.body
-      pp restaurant.fee
+      get "/api/v1/restaurants"
       expect(response.body).to include(restaurant.name)
       expect(response.body).to include(restaurant.fee.to_s)
       expect(response.body).to include(restaurant.time_required.to_s)

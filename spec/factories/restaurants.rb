@@ -6,8 +6,8 @@
 
 FactoryBot.define do
   factory :restaurant do
-    sequence(:name) { |n| "TEST_NAME#{n}"}
-    fee { 1000 }
+    sequence(:name) { |n| "test_restaurant#{n}"}
+    fee { 200 }
     time_required { 20 }
   end
 end
