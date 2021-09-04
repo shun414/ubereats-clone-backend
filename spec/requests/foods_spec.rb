@@ -9,6 +9,7 @@ RSpec.describe 'Food', type: :request do
       get "/api/v1/restaurants/#{restaurant.id}/foods"
       expect(response).to have_http_status(:success)
     end
+
     it 'returns foods' do
       get "/api/v1/restaurants/#{restaurant.id}/foods"
       expect(response.body).to include(food.name)

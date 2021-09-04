@@ -8,6 +8,7 @@ RSpec.describe 'Restaurant', type: :request do
       get "/api/v1/restaurants"
       expect(response).to have_http_status(:success)
     end
+
     it 'returns restaurants' do
       get "/api/v1/restaurants"
       expect(response.body).to include(restaurant.name)
